@@ -1,6 +1,6 @@
 # 보안 메모장
 
-AlertDialog 생성 (확인/취소 팝업창)
+### AlertDialog 생성 (확인/취소 팝업창)
 ~~~kotlin
 AlertDialog.Builder(this)
     .setTitle("Password Fail")
@@ -14,7 +14,7 @@ AlertDialog.Builder(this)
 // TODO Parameter 사용법? 사용하는 경우?
 ~~~
 
-getSharedPreferences : Local File에 간단한 Data 저장
+### getSharedPreferences : Local File에 간단한 Data 저장
 ~~~kotlin
 // "pass" 라는 키(key)를 가진 MODE_PRIVATE(다른 앱과 공유X) 파일생성
 val passwordSet = getSharedPreferences("pass", Context.MODE_PRIVATE)
@@ -28,10 +28,10 @@ passwordSet.edit {
 passwordSet.getString("pass", "0000") // "0000"는 값이 없을때 호출됨
 ~~~
 
-textView.text = string  vs  textView.setText(string)
+### textView.text = string  vs  textView.setText(string)
 내부적인 동작방식은 차이없음, 전자는 kotlin style 후자는 java style
 
-Handler 와 Runnable
+### Handler 와 Runnable
 ~~~kotlin
 // MainThread(UI) 로 보낼 수 있는 handler 생성
 private val handler = Handler(Looper.getMainLooper())
@@ -51,7 +51,7 @@ memoEditText.addTextChangedListener {
 }
 ~~~
 
-editText.addTextChangedListener : EditText의 상태를 감지
+### editText.addTextChangedListener : EditText의 상태를 감지
 ~~~kotlin
 //일반적인 함수 정의
 editText.addTextChangedListener(object: TextWatcher {
@@ -63,13 +63,13 @@ editText.addTextChangedListener(object: TextWatcher {
     })
 ~~~
 
-Activity.kt에서 AppCompatButton의 배경색 변경
+### Activity.kt에서 AppCompatButton의 배경색 변경
 ~~~kotlin
 changePasswordButton.setBackgroundColor(Color.RED)
 //Color.RED 대신 getColor(R.color.red) 사용가능?
 ~~~
 
-main.xml에서 text font 변경
+### main.xml에서 text font 변경
 ~~~kotlin
 android:fontFamily="@font/naver_pen"
 ~~~
